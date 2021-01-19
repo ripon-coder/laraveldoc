@@ -36,12 +36,27 @@
     </div>
     <div class="container">
       <center><h4><h4>Laravel Installation</h4></center><hr>
-        <li><h5>1) First Command :<code> composer create-project laravel/laravel example-app</code></h5></li>
-        <li><h5>2) Run Server :<code> php artisan serve</code></h5></li>
+        <li><h5> Install Command :<code> composer create-project laravel/laravel example-app</code></h5></li>
+        <li><h5> Run Server :<code> php artisan serve</code></h5></li>
+
+        <center><h4><h4>Jetstream Installation</h4></center><hr>
+          <li><h5> Install Command :<code> composer require laravel/jetstream</code></h5></li>
+          <li><h5>  Install Jetstream With Livewire :<code> php artisan jetstream:install livewire</code></h5></li>
+          <li><h5> Install Jetstream With Livewire and Teams :<code> php artisan jetstream:install livewire --teams</code></h5></li>
+          <article class="">
+            Finalizing The Installation.....
+            <pre>
+              npm install
+              npm run dev
+              php artisan migrate
+            </pre>
+            Liverwire Publish For......<br>
+            <code>php artisan vendor:publish --tag=jetstream-views</code>
+          </article>
 
       <center><h4><h4>Auth Installation</h4></center><hr>
-        <li><h5>1) First Command :<code> Composer require laravel/ui</code></h5></li>
-        <li><h5>2) Second Command :<code> php artisan ui vue  --auth</code></h5></li>
+        <li><h5>First Command :<code> Composer require laravel/ui</code></h5></li>
+        <li><h5>Second Command :<code> php artisan ui vue  --auth</code></h5></li>
 
       <center><h4><h4>Bootstrap Pagination</h4></center><hr>
         <li><h5>File: <q cite="">AppServiceProvider</q></h5></li>
