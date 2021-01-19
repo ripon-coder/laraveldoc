@@ -10,13 +10,10 @@
     <div class="container">
          <nav class="navbar navbar-expand-lg navbar-light bg-light">
           <a class="navbar-brand" href="#">ripon-coder</a>
-          <button class="navbar-toggler" type="button">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <div class="collapse navbar-collapse">
             <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Home</a>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Auth</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Features</a>
@@ -24,9 +21,54 @@
               <li class="nav-item">
                 <a class="nav-link" href="#">Pricing</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
             </ul>
           </div>
         </nav>
+    </div>
+    <div class="container">
+      <center><h4><h4>Laravel Installation</h4></center><hr>
+        <li><h5>1) First Command :<code> composer create-project laravel/laravel example-app</code></h5></li>
+        <li><h5>2) Run Server :<code> php artisan serve</code></h5></li>
+
+      <center><h4><h4>Auth Installation</h4></center><hr>
+        <li><h5>1) First Command :<code> Composer require laravel/ui</code></h5></li>
+        <li><h5>2) Second Command :<code> php artisan ui vue  --auth</code></h5></li>
+
+      <center><h4><h4>Bootstrap Pagination</h4></center><hr>
+        <li><h5>File: <q cite="">AppServiceProvider</q></h5></li>
+        <pre> public function boot(){
+          Paginator::useBootstrap();
+        }</pre>
+
+        <center><h4><h4>Class doesn't exist</h4></center><hr>
+          <li><h5>File: <q cite="">RouteServiceProvider</q></h5></li>
+          <pre>    protected $namespace = 'App\Http\Controllers';
+    public function boot()
+    {
+        $this->configureRateLimiting();
+
+        $this->routes(function () {
+            Route::prefix('api')
+                ->middleware('api')
+                ->namespace($this->namespace)
+                ->group(base_path('routes/api.php'));
+
+            Route::middleware('web')
+                ->namespace($this->namespace)
+                ->group(base_path('routes/web.php'));
+        });
+    }</pre>
+
+
     </div>
   </body>
 </html>
